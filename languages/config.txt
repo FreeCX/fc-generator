@@ -1,0 +1,4 @@
+filename = "font.gif"
+size = [160, 144]
+lang_default = ["special.txt", "english.txt"]
+lang_unicode = ["russian.txt"]
