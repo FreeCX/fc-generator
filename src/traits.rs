@@ -36,7 +36,7 @@ impl StrSpec for str {
                 for j in delimeters.chars() {
                     if i == j {
                         if next - prev >= 1 {
-                            token.push( self.slice( prev, next ).to_string() );
+                            token.push( self.slice( prev, next ).to_owned() );
                             prev = next + 1;
                             break;
                         }
@@ -48,7 +48,7 @@ impl StrSpec for str {
         }
         // add last token
         if next - prev >= 1 {
-            token.push( self.slice( prev, next ).to_string() );
+            token.push( self.slice( prev, next ).to_owned() );
         }
         token
     }
