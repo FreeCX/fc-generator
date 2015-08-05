@@ -1,10 +1,11 @@
-extern crate font_generator;
+mod structs;
+mod traits;
 use std::io::prelude::*;
 use std::fs::File;
 use std::path::Path;
 use std::io;
-use font_generator::traits::*;
-use font_generator::structs::*;
+use structs::*;
+use traits::*;
 
 fn read_line( text: &str ) -> String {
     let mut buffer = String::new();
